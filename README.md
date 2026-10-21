@@ -14,7 +14,12 @@ Baris di bawah nama menggunakan animasi menaip/padam yang bergilir antara enam a
 
 ## Jalankan secara setempat
 
-Projek menggunakan `.node-version` = `20.11.1` melalui nodenv. Tiada tetapan global diperlukan.
+Projek menggunakan `.node-version` = `22.23.3` melalui nodenv, dengan `engines.node` = `22.x` dalam manifest dan lockfile. Pilihan versi ini hanya untuk direktori projek; versi global tidak diubah. Gunakan `nodenv exec` supaya shell yang masih menghala ke Node lama tetap menjalankan runtime projek yang betul.
+
+    nodenv exec node --version
+    nodenv exec npm --version
+
+Versi yang diuji: Node.js 22.23.3 dan npm 10.9.9. Jika server pembangunan masih berjalan menggunakan versi terdahulu, hentikan sendiri dengan Ctrl+C dan jalankan semula arahan pembangunan di bawah. Tiada server dimulakan atau dihentikan secara automatik semasa pertukaran runtime.
 
     nodenv exec npm ci --ignore-scripts
     NEXT_TELEMETRY_DISABLED=1 nodenv exec npm run build
@@ -55,6 +60,8 @@ Layout akar berasingan membolehkan atribut HTML lang yang betul untuk BM dan EN.
 
 Nama paparan dan nama penuh sudah digunakan. Biodata pengguna ialah Full-Stack & Mobile App Developer dengan 5 tahun pengalaman pembangunan serta 3 tahun pengalaman freelance membina sistem dan aplikasi. Tempoh dipaparkan berasingan, bukan dijumlahkan sebagai 8 tahun. Fokus utama ialah Node.js, React, Next.js, NestJS dan Flutter. Docker, Docker Swarm dan Kubernetes (K8s) ditambah sebagai kemahiran yang disahkan pengguna, tanpa dakwaan tahap pakar atau tempoh pengalaman. DevOps dan AI automation dilabel sedang diterokai. PHP dikeluarkan; konsep dashboard menggunakan JavaScript.
 
+Setiap kad teknologi mempunyai ikon SVG setempat melalui `SkillIcon`, pada halaman utama dan Tentang untuk kedua-dua bahasa. Aset berada dalam `public/icons/skills/`, dengan rekod sumber dan versi dalam `sources.json` serta lesen sumber berasingan. Siluet jenama diambil daripada Simple Icons 16.35.0 dengan warna paparan setempat; Docker Swarm berkongsi logo Docker. DevOps dan AI Automation menggunakan ilustrasi asal (infiniti dan cip automasi), bukan dakwaan logo rasmi. Tiada CDN runtime atau dependency npm tambahan diperlukan.
+
 Menu dan halaman AI Lab serta arahan terminal `ai-lab` telah dibuang. Laluan lama `/ms/ai-lab/` dan `/en/ai-lab/` memberikan 404. Minat AI automation, ayat pengenalan dan demo projek automasi dikekalkan; penyingkiran ini khusus kepada halaman AI Lab.
 
 Tiga projek masih konsep DEMO, bukan aplikasi siap atau pengalaman kerja. Butiran organisasi/tarikh dan resume belum tersedia. E-mel yang diberikan pengguna, `tengkuyusoff19@gmail.com`, tersedia sebagai pautan mailto pada halaman utama, halaman hubungan BM/EN dan output terminal `contact` serta `sudo hire-me`. Tiada e-mel dihantar dan tiada akaun disambungkan.
@@ -77,7 +84,7 @@ Tiada akaun disambungkan dan tiada deployment dibuat.
     Build command: npm run build
     Build output directory: out
     SITE_URL: origin HTTPS domain sebenar, ditetapkan ketika build produksi
-    Node.js: pilih versi serasi; versi tempatan diuji ialah 20.11.1
+    Node.js: versi projek setempat yang diuji ialah 22.23.3
 
 Bukan deployment Workers dan tidak memerlukan `next-on-pages`. Rujukan rasmi: https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/
 

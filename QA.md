@@ -1,8 +1,25 @@
 # Laporan pengesahan Modern Dark Portfolio
 
 Direktori projek: /home/tengku/portfolio_yusoff
-Runtime ujian: nodenv Node.js 20.11.1, npm 10.2.4.
+Runtime ujian terkini: nodenv Node.js 22.23.3, npm 10.9.9. Rekod larian terdahulu di bawah menggunakan runtime yang dinyatakan ketika semakan masing-masing.
 Stack dipasang: Next.js 16.4.2, React 19.3.1. Tiada Node.js global diubah.
+
+## Semakan Node.js 22 untuk projek ini sahaja
+
+- `.node-version` = `22.23.3`; `engines.node` manifest dan root lockfile = `22.x`. Versi pakej aplikasi tidak diubah.
+- `nodenv version` mengesahkan sumber pilihan versi ialah `/home/tengku/portfolio_yusoff/.node-version`. `nodenv exec node --version` = `v22.23.3`; npm = `10.9.9`. `nodenv global` masih `16.10.0`; tiada arahan menetapkan versi global dijalankan.
+- `nodenv exec npm test`: 19 ujian lulus; build berjaya; `nodenv exec npm run test:export`: 6 ujian lulus, semuanya menggunakan Node.js 22.
+- Node dipasang setelah pengguna memberi izin. node-build 4.11.0 tidak mengenali definisi versi baharu, jadi definisi projek `scripts/node-build/22.23.3` menggunakan muat turun rasmi dan checksum yang disemak terhadap SHASUMS256. Plugin global tidak dikemas kini.
+- Pemasangan binary berjaya; hook tambahan Yarn milik pemasang melaporkan ralat kerana menerima laluan definisi sebagai NODENV_VERSION. Node dan npm disahkan berasingan selepas itu, dan semua ujian/build di atas berjaya. Projek menggunakan npm, bukan Yarn.
+- Tetapan dashboard Cloudflare, projek lain dan server yang sedang berjalan tidak diubah. Suite E2E pelayar tidak dijalankan semula untuk pertukaran runtime ini.
+
+## Semakan logo teknologi
+
+- `nodenv exec npm test`: 17 ujian lulus; build berjaya; `nodenv exec npm run test:export`: 6 ujian lulus. HTML eksport mengandungi 10 logo untuk setiap halaman utama/Tentang BM/EN, dan semua aset tersedia dalam output setempat.
+- Sembilan aset SVG meliputi sepuluh kad; Docker dan Docker Swarm berkongsi logo Docker. Tujuh siluet jenama menggunakan sumber Simple Icons yang dipin, manakala dua ikon umum ialah ilustrasi asal. Sumber, hash asal, warna paparan dan lesen direkod dalam `public/icons/skills/`.
+- Browser Use mengesahkan 80 kejadian logo dimuatkan dan berpusat merentas empat halaman dalam kedua-dua tema. Dua puluh semakan responsif pada 320, 390, 768, 1440 dan 1920px tiada overflow. Paparan desktop dan telefon diperiksa secara visual selepas imej siap dimuatkan.
+- Ikon hiasan menggunakan alt kosong dan bekas aria-hidden; nama teknologi kekal sebagai teks. Tiada perubahan pada tahap kemahiran. Bukti berstruktur: `test-results/skill-icons-check.json`.
+- Ujian Playwright logo disediakan untuk larian akan datang; suite penuh tidak dijalankan dalam perubahan ini. Semakan interaktif di atas ialah larian Browser Use, bukan dakwaan suite Playwright lulus.
 
 ## Semakan kemahiran infrastruktur dan penyingkiran AI Lab
 
