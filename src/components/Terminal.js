@@ -16,9 +16,9 @@ function Result({ entry, lang, run, quiet, setQuiet }) {
     case 'skills': return <><p>{skills.map(s=>s.name + (s.status === 'exploring' ? ` (${d.exploringLabel})` : '')).join(' / ')}</p><p>{d.skillsNote}</p></>;
     case 'projects': return <ul>{projects.map(p=><li key={p.slug}>{link('projects/'+p.slug,p[lang].title)} <small>— {d.demo}</small></li>)}</ul>;
     case 'experience': return <><p>{d.experienceSummary}</p>{link('experience',d.nav[3])}</>;
-    case 'ai-lab': return <><p>{d.aiApproach}</p><p>{d.labNote}</p>{link('ai-lab','AI Lab')}</>;
+
     case 'resume': return <p>{d.resume}</p>;
-    case 'contact': case 'sudo hire-me': return <><p>{d.contactEmpty}</p><ContactEmail lang={lang}/><div>{link('contact',d.nav[5])}</div></>;
+    case 'contact': case 'sudo hire-me': return <><p>{d.contactEmpty}</p><ContactEmail lang={lang}/><div>{link('contact',d.nav[4])}</div></>;
     case 'history': return entry.history.length ? <ol>{entry.history.map((h,i)=><li key={i}>{h}</li>)}</ol> : <p>{d.noHistory}</p>;
     case 'theme': return <div className={styles.themeChoices}><span>{d.effects}:</span><button type="button" aria-pressed={!quiet} onClick={()=>setQuiet(false)}>{d.matrix}</button><button type="button" aria-pressed={quiet} onClick={()=>setQuiet(true)}>{d.quiet}</button></div>;
     default: return null;

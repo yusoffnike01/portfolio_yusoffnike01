@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {sections,paths,dictionaries,getPage,pageMetadata,skills} from '../src/lib/site.mjs';
+import {sections,paths,dictionaries,getPage,pageMetadata,skills,profile} from '../src/lib/site.mjs';
 import {COMMANDS,parseCommand} from '../src/lib/terminal.mjs';
 
 test('AI Lab is absent from routes, navigation, metadata and terminal commands',()=>{
@@ -19,6 +19,7 @@ test('AI Lab is absent from routes, navigation, metadata and terminal commands',
 });
 
 test('removing AI Lab preserves the approved AI automation interest and contact email',()=>{
+ assert.ok(profile.contacts.some(contact=>contact.href==='mailto:tengkuyusoff19@gmail.com'));
  assert.ok(skills.some(skill=>skill.name==='AI Automation'&&skill.status==='exploring'));
  for(const lang of ['ms','en'])assert.ok(dictionaries[lang].rotatingIntro.phrases.some(phrase=>phrase.includes('AI automation')));
 });

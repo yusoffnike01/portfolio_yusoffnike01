@@ -53,7 +53,9 @@ Layout akar berasingan membolehkan atribut HTML lang yang betul untuk BM dan EN.
 
 ## Kandungan sebenar sebelum penerbitan
 
-Nama paparan dan nama penuh sudah digunakan. Biodata pengguna ialah Full-Stack & Mobile App Developer dengan 5 tahun pengalaman pembangunan serta 3 tahun pengalaman freelance membina sistem dan aplikasi. Tempoh dipaparkan berasingan, bukan dijumlahkan sebagai 8 tahun. Fokus utama ialah Node.js, React, Next.js, NestJS dan Flutter. DevOps dan AI automation dilabel sedang diterokai. PHP dikeluarkan; konsep dashboard menggunakan JavaScript.
+Nama paparan dan nama penuh sudah digunakan. Biodata pengguna ialah Full-Stack & Mobile App Developer dengan 5 tahun pengalaman pembangunan serta 3 tahun pengalaman freelance membina sistem dan aplikasi. Tempoh dipaparkan berasingan, bukan dijumlahkan sebagai 8 tahun. Fokus utama ialah Node.js, React, Next.js, NestJS dan Flutter. Docker, Docker Swarm dan Kubernetes (K8s) ditambah sebagai kemahiran yang disahkan pengguna, tanpa dakwaan tahap pakar atau tempoh pengalaman. DevOps dan AI automation dilabel sedang diterokai. PHP dikeluarkan; konsep dashboard menggunakan JavaScript.
+
+Menu dan halaman AI Lab serta arahan terminal `ai-lab` telah dibuang. Laluan lama `/ms/ai-lab/` dan `/en/ai-lab/` memberikan 404. Minat AI automation, ayat pengenalan dan demo projek automasi dikekalkan; penyingkiran ini khusus kepada halaman AI Lab.
 
 Tiga projek masih konsep DEMO, bukan aplikasi siap atau pengalaman kerja. Butiran organisasi/tarikh dan resume belum tersedia. E-mel yang diberikan pengguna, `tengkuyusoff19@gmail.com`, tersedia sebagai pautan mailto pada halaman utama, halaman hubungan BM/EN dan output terminal `contact` serta `sudo hire-me`. Tiada e-mel dihantar dan tiada akaun disambungkan.
 

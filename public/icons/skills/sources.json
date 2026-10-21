@@ -1,0 +1,61 @@
+{
+  "library": "Simple Icons",
+  "version": "16.35.0",
+  "license": "CC0-1.0",
+  "licenseSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.35.0/LICENSE.md",
+  "note": "Brand silhouettes from Simple Icons; local display fills applied. Docker Swarm shares the Docker brand icon. DevOps and AI Automation use original illustrations, not official logos.",
+  "assets": [
+    {
+      "file": "nodejs.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.35.0/icons/nodedotjs.svg",
+      "originalSha256": "021851b758cde7d3e04819c3ac02047d0ff281c712e8387afa0c76a6dac6db6c",
+      "displayFill": "#5FA04E"
+    },
+    {
+      "file": "react.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.35.0/icons/react.svg",
+      "originalSha256": "ab9136a1a4a8be72ac6743e1bdd1912d878bd68d57787ea7a6c6838e3b23c01c",
+      "displayFill": "#087EA4"
+    },
+    {
+      "file": "nextjs.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.35.0/icons/nextdotjs.svg",
+      "originalSha256": "593e14da3ddb65be4c8fa6a178f2f48a01a8bd39ea384f679cd7182b520da502",
+      "displayFill": "#111111"
+    },
+    {
+      "file": "nestjs.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.35.0/icons/nestjs.svg",
+      "originalSha256": "903a08f64eedd64fb3f65fb733628353d3d42f9e7525ca9d989936f3e38322ef",
+      "displayFill": "#E0234E"
+    },
+    {
+      "file": "flutter.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.35.0/icons/flutter.svg",
+      "originalSha256": "3f268e6fd52e538478ec299cef53cfd85a1c3454b5eb4c7997dd2e21e6b7d741",
+      "displayFill": "#02569B"
+    },
+    {
+      "file": "docker.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.35.0/icons/docker.svg",
+      "originalSha256": "65571291c261ef869c31540a38f3ca0f0ee3bb73f179c172211c8860f19a6359",
+      "displayFill": "#2496ED"
+    },
+    {
+      "file": "kubernetes.svg",
+      "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/16.35.0/icons/kubernetes.svg",
+      "originalSha256": "ceee2f4e87fa1533600672190c156194039f744fa9b5da10e83f002178e84b47",
+      "displayFill": "#326CE5"
+    },
+    {
+      "file": "devops.svg",
+      "source": "Original project illustration",
+      "displayFill": "multiple"
+    },
+    {
+      "file": "ai-automation.svg",
+      "source": "Original project illustration",
+      "displayFill": "multiple"
+    }
+  ]
+}

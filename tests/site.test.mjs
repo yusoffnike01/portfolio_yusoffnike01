@@ -4,8 +4,8 @@ const site = await import('../src/lib/site.mjs').catch(() => ({}));
 test('bilingual portfolio data is complete, demos honest, routes equivalent and preview SEO safe', () => {
   assert.equal(typeof site.getPage, 'function', 'getPage must exist');
   for (const lang of ['ms','en']) {
-    assert.equal(site.dictionaries[lang].nav.length, 6);
-    for (const section of ['', 'about', 'projects', 'experience', 'ai-lab', 'contact']) assert.ok(site.getPage(lang, section).title);
+    assert.equal(site.dictionaries[lang].nav.length, 5);
+    for (const section of ['', 'about', 'projects', 'experience', 'contact']) assert.ok(site.getPage(lang, section).title);
     for (const project of site.projects) {
       assert.equal(project.demo, true);
       assert.ok(project[lang].problem && project[lang].solution && project[lang].role && project[lang].outcome);

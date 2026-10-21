@@ -1,4 +1,4 @@
-export const COMMANDS = Object.freeze(['help', 'whoami', 'about', 'skills', 'projects', 'experience', 'ai-lab', 'resume', 'contact', 'clear', 'history', 'theme', 'sudo hire-me']);
+export const COMMANDS = Object.freeze(['help', 'whoami', 'about', 'skills', 'projects', 'experience', 'resume', 'contact', 'clear', 'history', 'theme', 'sudo hire-me']);
 export const initialState = Object.freeze({ history: [], output: [], sequence: 0 });
 export function executeCommand(state, raw) {
   const parsed = parseCommand(raw);

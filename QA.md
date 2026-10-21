@@ -4,6 +4,14 @@ Direktori projek: /home/tengku/portfolio_yusoff
 Runtime ujian: nodenv Node.js 20.11.1, npm 10.2.4.
 Stack dipasang: Next.js 16.4.2, React 19.3.1. Tiada Node.js global diubah.
 
+## Semakan kemahiran infrastruktur dan penyingkiran AI Lab
+
+- `nodenv exec npm test`: 16 ujian lulus; `NEXT_TELEMETRY_DISABLED=1 nodenv exec npm run build`: berjaya; `nodenv exec npm run test:export`: 5 ujian lulus.
+- Docker, Docker Swarm dan Kubernetes (K8s) dipaparkan pada halaman utama dan Tentang, BM/EN, dengan label neutral `Kemahiran` / `Skill`. Tiada tahap kepakaran atau tahun pengalaman direka.
+- Pelayar mengesahkan 12 kad baharu merentas empat halaman, output terminal `skills` bagi dua bahasa dan enam semakan responsif tanpa overflow. Bukti: `test-results/infrastructure-skills-check.json`.
+- Navigasi AI Lab, halaman khusus dan arahan terminal dibuang. Kedua-dua laluan lama memberikan 404; output eksport tiada fail atau pautan navigasi ke laluan tersebut. Menu Contact, alamat e-mel, minat AI automation dan demo projek automasi dikekalkan.
+- Build yang terhenti sebelum ini diperiksa sebelum dijalankan semula. Tiada fail projek dipadam secara manual, tiada dependency dipasang dan tiada commit dibuat. Suite Playwright penuh tidak dijalankan; semakan interaktif menggunakan Browser Use tersedia.
+
 ## Semakan e-mel hubungan
 
 - Alamat tepat `tengkuyusoff19@gmail.com` dengan href `mailto:tengkuyusoff19@gmail.com` dipaparkan pada halaman utama dan halaman hubungan BM/EN, serta output `contact` dan `sudo hire-me`.

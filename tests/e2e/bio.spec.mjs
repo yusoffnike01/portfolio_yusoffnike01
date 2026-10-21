@@ -21,7 +21,7 @@ test('real biodata appears in both languages, terminal and experience without ol
     await expect(page.getByRole('main')).toContainText('vibe coding');
     await page.goto(`/${lang}/experience/`);
     await expect(page.getByTestId('experience-summary')).toContainText(lang==='ms'?'Pembangunan full-stack':'Full-stack development');
-    for(const section of ['','about/','projects/','ai-lab/']) {
+    for(const section of ['','about/','projects/']) {
       await page.goto(`/${lang}/${section}`);
       expect(await page.locator('body').innerText()).not.toMatch(/\bPHP\b|8 (years|tahun)|Pengalaman sebenar akan ditambah|Real experience will be added/i);
     }

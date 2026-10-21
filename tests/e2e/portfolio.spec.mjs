@@ -7,7 +7,7 @@ test('terminal commands, history, safety, effects and keyboard navigation', asyn
   const input = page.getByLabel('Arahan terminal', {exact:true});
   await expect(input).not.toBeFocused();
   const run = async (value) => { await input.fill(value); await input.press('Enter'); };
-  for (const command of ['help','whoami','about','skills','projects','experience','ai-lab','resume','contact','sudo hire-me','theme']) {
+  for (const command of ['help','whoami','about','skills','projects','experience','resume','contact','sudo hire-me','theme']) {
     await run(command); await expect(page.getByTestId('terminal-entry').last()).toContainText(command);
   }
   await page.getByRole('button', {name:'Matrix tanpa efek',exact:true}).last().click();
