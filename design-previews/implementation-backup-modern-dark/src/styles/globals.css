@@ -1,0 +1,18 @@
+@layer reset, base;
+@layer reset { *, *::before, *::after { box-sizing: border-box; } body, h1, h2, h3, p { margin: 0; } button, input { font: inherit; } button, a, input { -webkit-tap-highlight-color: transparent; } }
+@layer base {
+ :root { --font-body: 22px; --font-ui: 20px; --font-small: 18px; --gutter: clamp(20px, 4vw, 80px); --bg: #080D0A; --surface: #101A14; --green: #4ADE80; --text: #E5E7EB; --muted: #A7B5AB; --border: #294333; --warning: #FBBF24; --error: #F87171; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color-scheme: dark; }
+ body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; line-height: 1.65; font-size: var(--font-body); }
+ a { color: inherit; text-decoration: none; } a:hover { color: var(--green); }
+ button { cursor: pointer; } button, input { color: inherit; }
+ :focus-visible { outline: 2px solid var(--green); outline-offset: 5px; }
+ ::selection { color: var(--bg); background: var(--green); }
+ h1, h2, h3 { line-height: 1.14; letter-spacing: -.035em; }
+ h2 { font-size: clamp(1.6rem, 2.5vw, 2rem); font-weight: 600; }
+ p { overflow-wrap: anywhere; }
+ .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+ .skip-link { position: fixed; top: 12px; left: 12px; padding: 12px 20px; background: var(--green); color: var(--bg); z-index: 100; transform: translateY(-180%); }
+ .skip-link:focus { transform: none; color: var(--bg); }
+ .not-found { max-width: 700px; margin: 15vh auto; padding: 24px; } .not-found p { margin: 24px 0; color: var(--muted); } .not-found a { color: var(--green); display: inline-block; padding: 16px 24px 16px 0; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

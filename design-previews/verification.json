@@ -1,0 +1,146 @@
+[
+  {
+    "variant": "A-modern-dark",
+    "viewport": 1920,
+    "scrollWidth": 1920,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "A-modern-dark",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "A-modern-dark",
+    "viewport": 390,
+    "scrollWidth": 390,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "A-modern-dark",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "B-clean-light",
+    "viewport": 1920,
+    "scrollWidth": 1920,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "B-clean-light",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "B-clean-light",
+    "viewport": 390,
+    "scrollWidth": 390,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "B-clean-light",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "C-editorial",
+    "viewport": 1920,
+    "scrollWidth": 1920,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "C-editorial",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "C-editorial",
+    "viewport": 390,
+    "scrollWidth": 390,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "variant": "C-editorial",
+    "viewport": 320,
+    "scrollWidth": 320,
+    "images": [
+      {
+        "loaded": true,
+        "src": "portrait.webp"
+      }
+    ],
+    "errors": []
+  }
+]

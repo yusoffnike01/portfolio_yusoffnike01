@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "test": "actual Three.js WebGL2 render",
+      "status": "pass",
+      "engine": "Three.js",
+      "revision": "186",
+      "webgl2": true,
+      "objects": 23,
+      "triangles": 191236,
+      "drawCalls": 380,
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "test": "portfolio hero context image",
+      "status": "pass",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "test": "typing animation starts, renders frames and stops",
+      "status": "pass"
+    },
+    {
+      "test": "reset camera position and zoom",
+      "status": "pass"
+    },
+    {
+      "test": "reduced motion prevents typing animation",
+      "status": "pass"
+    },
+    {
+      "test": "responsive scene and layout",
+      "status": "pass",
+      "width": 320,
+      "scroll": 320,
+      "canvas": 308
+    },
+    {
+      "test": "responsive scene and layout",
+      "status": "pass",
+      "width": 390,
+      "scroll": 390,
+      "canvas": 378
+    },
+    {
+      "test": "responsive scene and layout",
+      "status": "pass",
+      "width": 768,
+      "scroll": 768,
+      "canvas": 691
+    },
+    {
+      "test": "responsive scene and layout",
+      "status": "pass",
+      "width": 1440,
+      "scroll": 1440,
+      "canvas": 718
+    },
+    {
+      "test": "responsive scene and layout",
+      "status": "pass",
+      "width": 1920,
+      "scroll": 1920,
+      "canvas": 961
+    },
+    {
+      "test": "browser page errors",
+      "status": "pass",
+      "errors": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "name": "coding-scene-preview",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Isolated Three.js visual review; not part of the portfolio application.",
+  "dependencies": { "three": "0.186.1" }
+}

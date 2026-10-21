@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "test": "MacBook Pro, one external monitor and empty chair; no person, tower or platform",
+      "status": "pass",
+      "engine": "Three.js",
+      "revision": "186",
+      "features": {
+        "person": false,
+        "monitors": 1,
+        "macBookPro": true,
+        "pcTower": false,
+        "emptyChair": true,
+        "platform": false
+      },
+      "monitors": 1,
+      "chair": true,
+      "macBook": true,
+      "pcTower": false,
+      "triangles": 105714,
+      "calls": 380
+    },
+    {
+      "test": "top scene / biography below, portrait loaded",
+      "status": "pass"
+    },
+    {
+      "test": "rotate and reset empty desk",
+      "status": "pass"
+    },
+    {
+      "test": "light/dark theme button",
+      "status": "pass"
+    },
+    {
+      "test": "reduced motion blocks automatic rotation",
+      "status": "pass"
+    },
+    {
+      "test": "responsive layout",
+      "status": "pass",
+      "width": 320,
+      "scroll": 320,
+      "canvas": 280
+    },
+    {
+      "test": "responsive layout",
+      "status": "pass",
+      "width": 390,
+      "scroll": 390,
+      "canvas": 350
+    },
+    {
+      "test": "responsive layout",
+      "status": "pass",
+      "width": 768,
+      "scroll": 768,
+      "canvas": 707
+    },
+    {
+      "test": "responsive layout",
+      "status": "pass",
+      "width": 1440,
+      "scroll": 1440,
+      "canvas": 1100
+    },
+    {
+      "test": "responsive layout",
+      "status": "pass",
+      "width": 1920,
+      "scroll": 1920,
+      "canvas": 1100
+    }
+  ],
+  "errors": []
+}
