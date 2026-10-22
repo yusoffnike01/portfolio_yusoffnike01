@@ -7,3 +7,6 @@ test-results/
 !.env.example
 .npm-cache/
 .playwright-browsers/
+.wrangler/
+.dev.vars
+.dev.vars.*
