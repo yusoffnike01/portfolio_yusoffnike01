@@ -14,7 +14,7 @@ function Result({ entry, lang, run, quiet, setQuiet }) {
     case 'whoami': return <><p>{profile.fullName}</p><p>{d.role}</p><p>{d.experienceSummary}</p></>;
     case 'about': return <><p>{d.aboutBody}</p>{link('about',d.nav[1])}</>;
     case 'skills': return <><p>{skills.map(s=>s.name + (s.status === 'exploring' ? ` (${d.exploringLabel})` : '')).join(' / ')}</p><p>{d.skillsNote}</p></>;
-    case 'projects': return <ul>{projects.map(p=><li key={p.slug}>{link('projects/'+p.slug,p[lang].title)} <small>— {d.demo}</small></li>)}</ul>;
+    case 'projects': return <ul>{projects.map(p=><li key={p.slug}>{link('projects/'+p.slug,p[lang].title)} <small>— <a href={p.repo} target="_blank" rel="noopener noreferrer">GitHub</a></small></li>)}</ul>;
     case 'experience': return <><p>{d.experienceSummary}</p>{link('experience',d.nav[3])}</>;
 
     case 'resume': return <p>{d.resume}</p>;

@@ -27,5 +27,6 @@ test('real biodata appears in both languages, terminal and experience without ol
     }
   }
   expect((await request.get('/ms/projects/php-dashboard/')).status()).toBe(404);
-  expect((await request.get('/ms/projects/javascript-dashboard/')).status()).toBe(200);
+  expect((await request.get('/ms/projects/javascript-dashboard/')).status()).toBe(404);
+  expect((await request.get('/ms/projects/forecastify-edu/')).status()).toBe(200);
 });

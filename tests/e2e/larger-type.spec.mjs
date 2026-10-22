@@ -20,7 +20,7 @@ test('larger type applies to navigation, languages, terminal caption and both la
 
 test('larger text remains readable without horizontal overflow on every page at narrow widths',async({page})=>{
   test.setTimeout(90000);
-  const sections=['','about','projects','projects/backend-api','experience','contact'];
+  const sections=['','about','projects','projects/forecastify-edu','experience','contact'];
   for(const lang of ['ms','en']) for(const width of [320,390,768,1024,1920]) {
     await page.setViewportSize({width,height:1080});
     for(const section of sections) {

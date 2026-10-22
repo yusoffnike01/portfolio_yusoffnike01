@@ -14,9 +14,10 @@ test('production build emits canonical, hreflang, honest structured data and sit
     assert.ok(html.includes(profile.fullName));
     assert.ok(html.includes(origin+'/social/portfolio.png'));
   }
-  for(const lang of locales) for(const project of projects) assert.ok(readFileSync('out'+route(lang,'projects/'+project.slug)+'index.html','utf8').includes('content="noindex, follow"'));
+  for(const lang of locales) for(const project of projects) assert.ok(readFileSync('out'+route(lang,'projects/'+project.slug)+'index.html','utf8').includes(project.demo?'content="noindex, follow"':'content="index, follow"'));
   const sitemap=readFileSync('out/sitemap.xml','utf8');
-  assert.equal((sitemap.match(/<loc>/g)||[]).length,12);
-  for(const p of projects) assert.ok(!sitemap.includes(p.slug));
+  const indexable=sections.length+projects.filter(project=>!project.demo).length;
+  assert.equal((sitemap.match(/<loc>/g)||[]).length,indexable*locales.length);
+  for(const project of projects) assert.equal(sitemap.includes(project.slug),!project.demo);
   assert.ok(readFileSync('out/robots.txt','utf8').includes(origin+'/sitemap.xml'));
 });

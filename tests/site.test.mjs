@@ -7,9 +7,11 @@ test('bilingual portfolio data is complete, demos honest, routes equivalent and 
     assert.equal(site.dictionaries[lang].nav.length, 5);
     for (const section of ['', 'about', 'projects', 'experience', 'contact']) assert.ok(site.getPage(lang, section).title);
     for (const project of site.projects) {
-      assert.equal(project.demo, true);
-      assert.ok(project[lang].problem && project[lang].solution && project[lang].role && project[lang].outcome);
-      assert.ok(site.getPage(lang, 'projects/'+project.slug).demo);
+      assert.equal(project.demo, false);
+      assert.match(project.repo, /^https:\/\/github\.com\/yusoffnike01\//);
+      assert.match(project.image, /^\/projects\/.+\.jpg$/);
+      assert.ok(project[lang].imageAlt && project[lang].problem && project[lang].solution && project[lang].role && project[lang].outcome);
+      assert.equal(site.getPage(lang, 'projects/'+project.slug).demo, false);
     }
     const preview = site.pageMetadata(lang, '');
     assert.equal(preview.robots.index, false);
@@ -17,7 +19,7 @@ test('bilingual portfolio data is complete, demos honest, routes equivalent and 
     const production = site.pageMetadata(lang, 'about', 'https://portfolio.test');
     assert.equal(production.alternates.canonical, 'https://portfolio.test/'+lang+'/about/');
     assert.equal(production.alternates.languages.en, 'https://portfolio.test/en/about/');
-    assert.equal(site.pageMetadata(lang, 'projects/'+site.projects[0].slug, 'https://portfolio.test').robots.index, false);
+    assert.equal(site.pageMetadata(lang, 'projects/'+site.projects[0].slug, 'https://portfolio.test').robots.index, true);
   }
   assert.equal(site.getPage('fr',''), null);
   assert.equal(site.getPage('ms','projects/missing'), null);

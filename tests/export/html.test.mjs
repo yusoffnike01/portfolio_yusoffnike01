@@ -13,7 +13,10 @@ test('static export contains both languages, real navigation, honest content, ac
     assert.ok(!html.includes('rel="canonical"'));
     assert.ok(!html.includes('href="#"'));
     assert.ok(html.includes('Tengku Yusoff'));
-    if (path.startsWith('projects/')) assert.match(html, /DEMO/);
+    if (path.startsWith('projects/')) {
+      assert.match(html, /github\.com\/yusoffnike01/);
+      assert.match(html, /\/projects\/[^"]+\.jpg/);
+    }
     for (const href of [...html.matchAll(/href="(\/[^"?#]*)"/g)].map(m=>m[1])) {
       if (href.startsWith('/_next')) continue;
       assert.ok(existsSync('out'+href) || existsSync('out'+href+'index.html'), 'link exists: '+href);

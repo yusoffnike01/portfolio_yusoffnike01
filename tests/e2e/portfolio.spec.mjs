@@ -26,11 +26,11 @@ test('terminal commands, history, safety, effects and keyboard navigation', asyn
   expect(errors).toEqual([]);
 });
 test('language switching keeps equivalent project, metadata and 404 are correct', async ({ page, request }) => {
-  await page.goto('/ms/projects/backend-api/');
+  await page.goto('/ms/projects/forecastify-edu/');
   await page.getByRole('link', {name:'EN',exact:true}).click();
-  await expect(page).toHaveURL(/\/en\/projects\/backend-api\//);
+  await expect(page).toHaveURL(/\/en\/projects\/forecastify-edu\//);
   await expect(page.locator('html')).toHaveAttribute('lang','en');
-  await expect(page.getByRole('heading',{level:1})).toHaveText('Backend API');
+  await expect(page.getByRole('heading',{level:1})).toHaveText('Forecastify Edu');
   await expect(page.locator('meta[name=robots]')).toHaveAttribute('content','noindex, follow');
   expect((await request.get('/missing-page/')).status()).toBe(404);
   expect((await request.get('/fr/')).status()).toBe(404);
